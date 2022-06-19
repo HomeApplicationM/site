@@ -26,7 +26,7 @@ pip install -r requirements.txt
 If the DB has been mutated:
 
 ```bash
-flask db -m migrate "all"
+flask db migrate -m "all"
 flask db upgrade
 ```
 
