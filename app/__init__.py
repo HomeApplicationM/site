@@ -1,12 +1,22 @@
 from flask import Flask
-app = Flask(__name__)
+from flask_sqlalchemy import SQLAlchemy
+from flask_migrate import Migrate
+from config import Config
+
+
+db = SQLAlchemy()
+migrate = Migrate()
 
 def create_app():
     app = Flask(__name__)
+    app.config.from_object(Config)
 
-    @app.route("/")
-    def hello():
-        return "<h1 style='color:blue'>Bisous <3 <3 <3 <3 <3 <3</h1>"
+    with app.app_context():
+        db.init_app(app)
+        migrate.init_app(app, db)
+
+    from app.routes.main import main as main_blueprint
+    app.register_blueprint(main_blueprint)
 
     return app
 

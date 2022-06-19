@@ -14,6 +14,8 @@ From there, run:
 git checkout main
 git pull
 sudo systemctl stop maizener
+source venv/bin/activate
+pip install -r requirements.txt
 sudo systemctl start maizener
 ```
 
