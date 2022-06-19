@@ -6,6 +6,7 @@ from datetime import datetime
 from app.forms import LoginForm, RegistrationForm, AddBirthday
 from app.models import User, PersonOfInterest
 from app import db, login
+import flask
 
 birthdays_bp = Blueprint('birthdays', __name__)
 
@@ -24,3 +25,15 @@ def add_birthday():
         db.session.commit()
         flash('Congratulations, you added a new birthday!')
     return render_template('add_birthday.html', title='Add a Birthday', form=form)
+
+@birthdays_bp.route('/birthdays', methods=['GET', 'POST'])
+@login_required
+def birthdays():
+    birthdays = PersonOfInterest.query.filter(current_user.id == PersonOfInterest.related_to_user_id).all()
+    print(birthdays)
+    print(flask.request.method)
+
+    if flask.request.method == 'GET':
+        return render_template('birthdays.html',pois=birthdays)
+
+

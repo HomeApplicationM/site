@@ -37,7 +37,8 @@
                             <li><a href="{{ url_for('login.login') }}">Sign-in</a></li>
                             {% else %}
                             <li><a href="{{ url_for('birthdays.add_birthday') }}">Add Birthday</a></li>
-                            <li><a href="{{ url_for('login.user', username=current_user.Username) }}">{{current_user.username}}</a></li>
+                            <li><a href="{{ url_for('birthdays.birthdays') }}">List Birthdays</a></li>
+                            <li><a href="{{ url_for('login.user', username=current_user.username) }}">{{current_user.username}}</a></li>
                             <li><a href="{{ url_for('login.logout') }}">Logout</a></li>
                             {% endif %}
                         </ul>
