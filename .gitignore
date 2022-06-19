@@ -4,5 +4,4 @@ __pycache__
 *.ini
 *.sock
 config.py
-migrations/
 .env
