@@ -36,3 +36,12 @@ uwsgi --socket 0.0.0.0:5000 --protocol=http -w wsgi:app
 ```
 
 The app should be visible there : <http://0.0.0.0:5000/>
+
+## Troubleshooting
+
+Postgres issue:
+Make sure postgres is running:
+
+```bash
+sudo systemctl start postgresql.service
+```
