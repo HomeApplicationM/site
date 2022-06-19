@@ -14,8 +14,25 @@ From there, run:
 git checkout main
 git pull
 sudo systemctl stop maizener
+```
+
+If new packages have been added to requirements:
+
+```bash
 source venv/bin/activate
 pip install -r requirements.txt
+```
+
+If the DB has been mutated:
+
+```bash
+flask db -m migrate "all"
+flask db upgrade
+```
+
+Finally:
+
+```bash
 sudo systemctl start maizener
 ```
 
