@@ -1,0 +1,158 @@
+body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+.navbar-default {
+    background-color: white !important;
+    border: none;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.logo-image {
+    padding-left: 5px;
+    padding-top: 5px;
+    width: 60px;
+    height: 60px;
+    overflow: hidden;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+input_out {
+    border-top-style: hidden;
+    border-right-style: hidden;
+    border-left-style: hidden;
+    border-bottom-style: groove;
+    background-color: #eee;
+}
+/* styles for validation helpers */
+.field-validation-error {
+    color: #b94a48;
+}
+
+.field-validation-valid {
+    display: none;
+}
+
+input.input-validation-error {
+    border: 1px solid #b94a48;
+}
+
+input[type="checkbox"].input-validation-error {
+    border: 0 none;
+}
+
+.validation-summary-errors {
+    color: #b94a48;
+}
+
+.validation-summary-valid {
+    display: none;
+}
+
+.input-text-box {
+    font-family: inherit;
+    font-size: inherit;
+    line-height: 1.428571429;
+    color: #333333;
+    background-color: #ffffff;
+    border: 1px solid gainsboro;
+    width: 200px;
+}
+
+.input-button {
+    background-color: lightgrey;
+    border: none;
+    color: inherit;
+    padding: 2px 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 2px
+}
+
+.dropdown {
+    font-family: inherit;
+    font-size: inherit;
+    line-height: 1.428571429;
+    color: inherit;
+    background-color: #ffffff;
+    border: 1px solid gainsboro;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 200px;
+    height: 25px;
+    line-height: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+.input-label {
+    width: 150px;
+    color: inherit
+}
+
+.int-table {
+    border-collapse: collapse;
+    font-family: inherit;
+    font-size: inherit;
+    vertical-align: top;
+    padding: 15px;
+    text-align: left;
+}
+
+.int-table-cell {
+    vertical-align: top;
+    border-collapse: collapse;
+    border-bottom: 0.5px solid gainsboro;
+}
+
+.int-table-tr:hover {
+    background-color: gainsboro;
+}
+
+.cancel:hover {
+    -webkit-appearance: button;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    box-sizing: border-box;
+    margin: 0;
+    max-width: 280px;
+    user-select: none;
+    white-space: pre;
+    align-items: flex-start;
+    text-align: center;
+    padding: 1px 6px;
+    border-width: 2px;
+    border-style: outset;
+    border-image: initial;
+    text-rendering: auto;
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    background-color: #fff;
+    -webkit-text-size-adjust: 100%;
+    box-sizing: border-box;
+    pointer-events: none;
+}
