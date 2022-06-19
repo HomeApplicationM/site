@@ -1,4 +1,4 @@
-from app import db, login, admin
+from app import db #, login, admin
 # from flask_login import UserMixin
 # from flask_security import RoleMixin
 from werkzeug.security import generate_password_hash, check_password_hash
