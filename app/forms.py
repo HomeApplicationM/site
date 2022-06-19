@@ -1,6 +1,7 @@
 from flask_wtf import FlaskForm
 from wtforms import StringField, PasswordField, BooleanField, SubmitField, SelectField
 from wtforms.validators import ValidationError, DataRequired, Email, EqualTo
+from wtforms.fields import DateField
 from app.models import User
 
 class RegistrationForm(FlaskForm):
@@ -30,4 +31,11 @@ class LoginForm(FlaskForm):
     password = PasswordField('Password', validators=[DataRequired()])
     remember_me = BooleanField('Remember Me')
     submit = SubmitField('Sign In')
+
+class AddBirthday(FlaskForm):
+    first_name = StringField('First Name', validators=[DataRequired()])
+    last_name = StringField('Last Name')
+    birthday = DateField('Birthday', validators=[DataRequired()])
+    submit = SubmitField('Add Birthday!')
+
 
