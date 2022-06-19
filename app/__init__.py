@@ -41,6 +41,9 @@ def create_app():
     from app.routes.login import login_bp as login_blueprint
     app.register_blueprint(login_blueprint)
 
+    from app.routes.birthdays import birthdays_bp as birthdays_blueprint
+    app.register_blueprint(birthdays_blueprint)
+
     return app
 
 if __name__ == "__main__":

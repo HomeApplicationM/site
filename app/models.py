@@ -21,3 +21,16 @@ class User(UserMixin, db.Model):
 
     def __repr__(self):
         return '<User {}>'.format(self.username)
+
+class PersonOfInterest(db.Model):
+    __tablename__ = 'pois'
+    __table_args__ = {'extend_existing': True}
+
+    id = db.Column(db.Integer(), db.Sequence('poi_seq'), primary_key=True)
+    first_name = db.Column(db.String)
+    last_name = db.Column(db.String)
+    related_to_user_id = db.Column(db.Integer, db.ForeignKey(User.id))
+    birthday = db.Column(db.DateTime)
+
+    def __repr__(self):
+        return '<PersonOfInterest {}>'.format(self.first_name)
