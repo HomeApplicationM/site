@@ -5,3 +5,4 @@ __pycache__
 *.sock
 config.py
 migrations/
+.env
